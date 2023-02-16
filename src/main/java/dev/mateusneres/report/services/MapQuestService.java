@@ -17,7 +17,7 @@ import org.springframework.web.client.RestTemplate;
 @Service
 public class MapQuestService {
 
-    @Value("${MAPQUEST_API_KEY}")
+    @Value("${mapquest.apikey}")
     private String apiKey;
 
     private final RestTemplate restTemplate;

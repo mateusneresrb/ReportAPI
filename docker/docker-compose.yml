@@ -2,17 +2,19 @@ version: '3'
 
 services:
   app:
+    container_name: ReportAPI
     build: .
     ports:
       - "8080:8080"
     environment:
       SPRING_DATASOURCE_USERNAME: username
       SPRING_DATASOURCE_PASSWORD: password
-      MAPQUEST_API_KEY: YOUR-API-KEY
+      MAPQUEST_APIKEY: YOUR-KEY
     depends_on:
       - h2
 
   h2:
+    container_name: ReportAPI-H2
     image: oscarfonts/h2
     ports:
       - "9092:8082"
