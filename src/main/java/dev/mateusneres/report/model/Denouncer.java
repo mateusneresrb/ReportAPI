@@ -1,5 +1,6 @@
 package dev.mateusneres.report.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
@@ -13,6 +14,7 @@ import java.util.List;
 
 @Getter
 @NoArgsConstructor
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "reportList"})
 public class Denouncer {
 
     @Id
@@ -39,9 +41,5 @@ public class Denouncer {
         this.nome = name;
         this.cpf = cpf;
     }
-
-    //UMA CONTA VAI TER UMA LISTA DE REPORTS ? OKAY OR NOT
-    //UMA DENUNCIA VAI TER UM ENDEREÇO VINCULADO ? OKAY
-    //SE QUISER PEGAR UMA LISTA DE DENUNCIA BASEADA NO ENDEREÇO = QUERY
 
 }
