@@ -1,9 +1,8 @@
-package dev.mateusneres.report.model;
+package dev.mateusneres.report.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 
 import javax.persistence.*;
 
