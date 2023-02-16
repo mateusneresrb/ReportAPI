@@ -1,7 +1,6 @@
 package dev.mateusneres.report.controllers;
 
 import dev.mateusneres.report.dtos.CreateReportDto;
-import dev.mateusneres.report.dtos.DenouncerCpfDto;
 import dev.mateusneres.report.exceptions.BadRequestException;
 import dev.mateusneres.report.services.DenouncerService;
 import dev.mateusneres.report.services.ReportService;
@@ -26,7 +25,7 @@ public class ReportController {
         this.denouncerService = denouncerService;
     }
 
-    @PostMapping(value = "/denuncias", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/denuncias", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Object> createReport(@Valid @RequestBody() CreateReportDto createReportDto, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             throw new BadRequestException(1, "Request inválido");
@@ -36,12 +35,14 @@ public class ReportController {
     }
 
     @GetMapping(value = "/denuncias", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Object> getReportsByCpf(@Valid @RequestBody() DenouncerCpfDto denouncerCpfDto, BindingResult bindingResult) {
-        if (bindingResult.hasErrors()) {
+    public ResponseEntity<Object> getReportsByCpf(@RequestParam(name = "cpf") String cpf) {
+        boolean containsOnlyDigits = cpf.matches("[0-9]+");
+
+        if(cpf.length() != 11 || !containsOnlyDigits) {
             throw new BadRequestException(1, "Request inválido");
         }
 
-        return ResponseEntity.status(HttpStatus.OK).body(denouncerService.getReportsByDenouncer(denouncerCpfDto.getCpf()));
+        return ResponseEntity.status(HttpStatus.OK).body(denouncerService.getReportsByDenouncer(cpf));
     }
 
 }
