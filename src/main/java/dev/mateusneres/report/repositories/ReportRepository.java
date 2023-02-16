@@ -1,8 +1,8 @@
 package dev.mateusneres.report.repositories;
 
-import dev.mateusneres.report.model.Address;
-import dev.mateusneres.report.model.Denouncer;
-import dev.mateusneres.report.model.Report;
+import dev.mateusneres.report.entities.Address;
+import dev.mateusneres.report.entities.Denouncer;
+import dev.mateusneres.report.entities.Report;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ReportRepository extends JpaRepository<Report, Long> {

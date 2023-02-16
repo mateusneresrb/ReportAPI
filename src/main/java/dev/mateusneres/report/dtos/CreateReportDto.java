@@ -2,12 +2,12 @@ package dev.mateusneres.report.dtos;
 
 import dev.mateusneres.report.dtos.sub.DenouncerDto;
 import dev.mateusneres.report.dtos.sub.ReportDto;
-import lombok.Getter;
+import lombok.Data;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-@Getter
+@Data
 public class CreateReportDto {
 
     @NotNull(message = "A latitude não pode ser nula")

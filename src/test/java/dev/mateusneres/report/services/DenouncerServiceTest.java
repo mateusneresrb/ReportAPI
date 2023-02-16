@@ -1,8 +1,6 @@
 package dev.mateusneres.report.services;
 
-import dev.mateusneres.report.entities.Address;
 import dev.mateusneres.report.entities.Denouncer;
-import dev.mateusneres.report.entities.Report;
 import dev.mateusneres.report.repositories.DenouncerRepository;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.junit.Assert;
@@ -12,10 +10,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-import java.util.Arrays;
-import java.util.List;
-
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.anyString;
+import static org.mockito.Mockito.when;
 
 public class DenouncerServiceTest {
 

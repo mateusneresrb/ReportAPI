@@ -1,13 +1,11 @@
 package dev.mateusneres.report.services;
 
-import dev.mateusneres.report.model.Denouncer;
-import dev.mateusneres.report.model.Report;
+import dev.mateusneres.report.entities.Denouncer;
+import dev.mateusneres.report.entities.Report;
 import dev.mateusneres.report.repositories.DenouncerRepository;
-
-import java.util.Collections;
-
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
 
 @Service

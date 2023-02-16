@@ -2,22 +2,17 @@ package dev.mateusneres.report.services;
 
 import dev.mateusneres.report.entities.Address;
 import dev.mateusneres.report.repositories.AddressRepository;
-import dev.mateusneres.report.services.AddressService;
-import dev.mateusneres.report.services.MapQuestService;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.anyDouble;
+import static org.mockito.Mockito.when;
 
 @WebMvcTest(AddressService.class)
 public class AddressServiceTest {

@@ -1,6 +1,6 @@
 package dev.mateusneres.report.services;
 
-import dev.mateusneres.report.model.Address;
+import dev.mateusneres.report.entities.Address;
 import dev.mateusneres.report.repositories.AddressRepository;
 import org.springframework.stereotype.Service;
 

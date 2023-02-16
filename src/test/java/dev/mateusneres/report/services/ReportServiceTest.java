@@ -1,6 +1,5 @@
 package dev.mateusneres.report.services;
 
-import dev.mateusneres.report.dtos.CreateReportDto;
 import dev.mateusneres.report.entities.Address;
 import dev.mateusneres.report.entities.Denouncer;
 import dev.mateusneres.report.entities.Report;
