@@ -10,7 +10,7 @@
     </parent>
     <groupId>dev.mateusneres</groupId>
     <artifactId>ReportAplication</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.2.1-SNAPSHOT</version>
     <name>ReportAplication</name>
     <description>ReportAplication</description>
     <properties>
@@ -103,33 +103,6 @@
                         </exclude>
                     </excludes>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.7</version>
-                <configuration>
-                    <excludes>
-                        <exclude>**/domain/*.class</exclude>
-                        <exclude>**/dtos/**</exclude>
-                        <exclude>**/exceptions/*.class</exclude>
-                        <exclude>**/entities/*.class</exclude>
-                    </excludes>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>prepare-agent</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>report</id>
-                        <phase>prepare-package</phase>
-                        <goals>
-                            <goal>report</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>

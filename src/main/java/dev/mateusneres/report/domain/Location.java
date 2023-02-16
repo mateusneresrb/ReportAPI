@@ -1,6 +1,5 @@
 package dev.mateusneres.report.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 @Data
